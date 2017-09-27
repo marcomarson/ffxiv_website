@@ -2,7 +2,7 @@
 
 
 
-FFXIV is a website created using Python and Django,and using the project bootcamp [3] as a starter base
+FFXIV is a website created using Python and Django,and using the project bootcamp [1] as a starter base
 
 The project has a lot of apps:
 

@@ -106,6 +106,8 @@ STATICFILES_DIRS = (
     PROJECT_DIR.child('static'),
 )
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MEDIA_ROOT = PROJECT_DIR.parent.child('media')
 MEDIA_URL = '/media/'
 

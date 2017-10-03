@@ -90,8 +90,12 @@
       </header>
       <main>
         <div class="container">
-          {% block main %}
-          {% endblock main %}
+          {%for photo in photos %}
+          {% if photo.image  %}
+          <h1>{{photo.title}}</h1>
+          <img src='{{ photo.image.url }}' class='img-responsive' />
+          {% endif  %}
+          {% endfor  %}
         </div>
       </main>
       <script src="{% static 'js/notifications.js' %}"></script>

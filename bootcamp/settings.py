@@ -10,17 +10,17 @@ PROJECT_DIR = Path(__file__).parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
 }
-
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
+SITE_ID = 1
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -29,6 +29,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'django.contrib.admin',
+    'django.contrib.sites',
 
     'bootcamp.activities',
     'bootcamp.articles',
@@ -39,6 +41,8 @@ INSTALLED_APPS = (
     'bootcamp.questions',
     'bootcamp.search',
     'taggit',
+    'photos',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,11 +73,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
             'debug': DEBUG
         },
     },
 ]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -119,3 +125,7 @@ FILE_UPLOAD_TEMP_DIR = '/tmp/'
 FILE_UPLOAD_PERMISSIONS = 0o644
 
 TAGGIT_CASE_INSENSITIVE = True
+
+# coding: utf-8
+
+# coding: utf-8

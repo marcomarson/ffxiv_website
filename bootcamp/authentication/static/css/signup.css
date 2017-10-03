@@ -1,5 +1,9 @@
+
 body {
-  background-color: #006389;
+  background-color: #cccccc;
+  background-image: url("../img/Final-Fantasy-XIV-Heavensward-KeyArt.jpg");
+  background-repeat:no-repeat;
+  background-size: 100%;
 }
 
 .logo {

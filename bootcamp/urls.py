@@ -9,11 +9,13 @@ from bootcamp.authentication import views as bootcamp_auth_views
 from bootcamp.core import views as core_views
 from bootcamp.search import views as search_views
 from photos.views import photo_list
+from events.views import event_list
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^photo/', photo_list, name='photo'),
+    url(r'^eventos/', event_list, name='event'),
     url(r'^$', core_views.home, name='home'),
     url(r'^login', auth_views.login, {'template_name': 'core/cover.html'},
         name='login'),

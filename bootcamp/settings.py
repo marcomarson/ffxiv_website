@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.sites',
 
+    'django_tables2',
     'bootcamp.activities',
     'bootcamp.articles',
     'bootcamp.authentication',
@@ -42,6 +43,7 @@ INSTALLED_APPS = (
     'bootcamp.search',
     'taggit',
     'photos',
+    'events',
 
 )
 
@@ -73,6 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
 
             ],
             'debug': DEBUG

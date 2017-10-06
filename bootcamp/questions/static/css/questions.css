@@ -1,3 +1,20 @@
+.page-header {
+background-color: #33333D;
+color:#fff;
+width: inherit;
+height: 50px;
+border-radius: 6px;
+}
+.page-header h1{
+  width: inherit;
+  height: inherit;
+  padding-top: 7px;
+  text-align: center;
+}
+.page-header a{
+    margin-top: 7px;
+}
+
 .questions {
   margin-top: 1em;
 }

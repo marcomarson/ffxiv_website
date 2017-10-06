@@ -9,6 +9,7 @@
 {% endblock head %}
 
 {% block main %}
+<div class="allarticles">
   <div class="page-header">
     <a href="{% url 'write' %}" class="btn btn-primary pull-right">
       <span class="glyphicon glyphicon-pencil"></span> {% trans 'Escrever um Artigo' %}
@@ -35,8 +36,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2 paginator">
       {% include 'paginator.html' with paginator=articles %}
     </div>
   </div>
+</div>
 {% endblock main %}

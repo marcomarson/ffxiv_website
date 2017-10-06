@@ -9,8 +9,10 @@
         <span class="glyphicon glyphicon-ok"></span>
       {% endif %}
       <a href="{% url 'question' question.pk %}">{{ question.title }}</a>
+      {% if  user == question.user %}
       <a href="{% url 'delete_question' question.pk  %}" class="btn btn-primary pull-right" style="color:#fff"></span> {% trans "Deletar Pergunta" %}
       </a>
+      {% endif %}
     </h3>
 
   </div>

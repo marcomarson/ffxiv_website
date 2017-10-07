@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load staticfiles %}
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as CURRENT_LANGUAGE %}
 
 {% block title %}Account Settings{% endblock %}
+
+{% block head %}
+  <link href="{% static 'css/settings.css' %}" rel="stylesheet">
+{% endblock head %}
+
 
 {% block main %}
   <div class="page-header">

@@ -1,0 +1,19 @@
+.breadcrumb {
+background-color: #33333D;
+color:#fff;
+width: inherit;
+height: 50px;
+border-radius: 6px;
+}
+.breadcrumb > .active{
+  color:#fff;
+}
+
+.titulo{
+  color:#777;
+  font-size:30px;
+  text-align: center;
+}
+.form-group{
+  margin-left: 13px;
+}

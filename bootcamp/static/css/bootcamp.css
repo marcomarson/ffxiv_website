@@ -32,12 +32,15 @@ header .navbar-brand {
 header .navbar{
     background-color: #33333D;
     color:#fff;
+    border: 0px;
+
 }
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
   color: #5e5e5e;
 }
 main .container {
   background-color: #e7e7e7;
+  border-radius: 10px;
 }
 .navbar-default .navbar-nav > li > a {
   color: #e7e7e7;

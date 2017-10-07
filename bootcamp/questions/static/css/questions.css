@@ -1,3 +1,18 @@
+.breadcrumb {
+background-color: #33333D;
+color:#fff;
+width: inherit;
+height: 50px;
+border-radius: 6px;
+}
+.breadcrumb > .active{
+  color:#fff;
+}
+
+.primario{
+  margin-left: 15px;
+}
+
 .page-header {
 background-color: #33333D;
 color:#fff;
@@ -5,7 +20,7 @@ width: inherit;
 height: 50px;
 border-radius: 6px;
 }
-.page-header h1{
+.page-header h1,h4{
   width: inherit;
   height: inherit;
   padding-top: 7px;

@@ -1,3 +1,27 @@
+.row{
+  margin-left: 0px;
+}
+.page-header {
+background-color: #33333D;
+color:#fff;
+width: inherit;
+height: 50px;
+border-radius: 6px;
+}
+.page-header h1{
+  width: inherit;
+  height: inherit;
+  padding-top: 7px;
+  text-align: center;
+}
+.page-header button{
+    margin-top: 7px;
+    margin-right: 2px;
+}
+
+
+
+
 ul.stream {
   margin: 0;
   padding: 0;
@@ -142,8 +166,8 @@ ul.stream li div.post div.interaction a {
 }
 
 .remove-feed {
-  color: #bbbbbb; 
-  font-size: .8em; 
+  color: #bbbbbb;
+  font-size: .8em;
   padding-top: .2em;
   float: right;
   cursor: pointer;

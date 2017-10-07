@@ -22,11 +22,13 @@
       <li{% if active == 'answered' %} class="active"{% endif %}><a href="{% url 'answered' %}">{% trans "Respondidas" %}</a></li>
       <li{% if active == 'all' %} class="active"{% endif %}><a href="{% url 'all' %}">{% trans "Todas as perguntas" %}</a></li>
     </ul>
+    <div class="primario">
     {% for question in questions %}
       {% include 'questions/partial_question.html' with question=question %}
     {% empty %}
       <h4 class="no-data">{% trans "Sem questões para mostrar" %}</h4>
     {% endfor %}
+  </div>
     {% include 'paginator.html' with paginator=questions %}
   </div>
 {% endblock main %}

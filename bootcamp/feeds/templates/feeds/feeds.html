@@ -11,22 +11,21 @@
 {% block main %}
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
 
       <div class="page-header">
         <button type="button" class="btn btn-primary pull-right btn-compose" title="{% trans 'Press Ctrl + P to compose' %}">
-          <span class="glyphicon glyphicon-share-alt"></span> {% trans 'Compose' %}
+          <span class="glyphicon glyphicon-share-alt"></span> {% trans 'Escrever' %}
         </button>
-        <h1>{% trans 'Feed' %}</h1>
+        <h1>{% trans 'Linha do Tempo' %}</h1>
       </div>
 
         <div class="panel-heading">
-          <h3 class="panel-title">{% trans 'Latest posts' %}</h3>
+          <h3 class="panel-title">{% trans 'Últimos posts' %}</h3>
         </div>
         <div class="panel-body">
 
           <div class="compose">
-            <h2>{% trans "Compose a new post" %}</h2>
+            <h2>{% trans "Escrever um post" %}</h2>
             <form role="form" id="compose-form">
               {% csrf_token %}
               <input type="hidden" name="last_feed">
@@ -35,15 +34,15 @@
               </div>
               <div class="form-group">
                 <button type="button" class="btn btn-primary btn-post">
-                  <span class="glyphicon glyphicon-send"></span> {% trans 'Post' %}
+                  <span class="glyphicon glyphicon-send"></span> {% trans 'Enviar' %}
                 </button>
-                <button type="button" class="btn btn-default btn-cancel-compose">{% trans 'Cancel' %}</button>
+                <button type="button" class="btn btn-default btn-cancel-compose">{% trans 'Cancelar' %}</button>
                 <span class="help-block help-count pull-right">255</span>
               </div>
             </form>
           </div>
           <div class="stream-update">
-            <a href="#"><span class="new-posts"></span> {% trans 'new posts' %}</a>
+            <a href="#"><span class="new-posts"></span> {% trans 'Novos posts' %}</a>
           </div>
           <ul class="stream">
             {% for feed in feeds %}
@@ -60,7 +59,6 @@
           </form>
 
         </div>
-      </div>
     </div>
   </div>
 

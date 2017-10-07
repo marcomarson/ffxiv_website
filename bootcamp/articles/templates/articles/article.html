@@ -7,6 +7,7 @@
 {% block head %}
   <link href="{% static 'css/articles.css' %}" rel="stylesheet">
   <script src="{% static 'js/articles.js' %}"></script>
+  <link href="{% static 'css/escreverartigo.css' %}" rel="stylesheet">
 {% endblock head %}
 
 {% block main %}
@@ -15,14 +16,16 @@
     <li class="active">{% trans 'Artigos' %}</li>
   </ol>
   {% if article.create_user == request.user %}
-    <div class="panel panel-default">
+    <div class="panel-default">
       <a href="{% url 'edit_article' article.pk %}" class="btn btn-primary pull-right">
-        <span class="glyphicon glyphicon-pencil"></span> {% trans "Editar Artigo" %}
+         {% trans "Editar Artigo" %}
       </a>
       <a href="{% url 'delete_article' article.pk %}" class="btn btn-primary pull-right"></span> {% trans "Deletar Artigo" %}
       </a>
     </div>
   {% endif %}
+  <div style="margin-left:15px;">
   {% include 'articles/partial_article.html' with article=article %}
   {% include 'articles/partial_article_comments.html' with article=article %}
+  </div
 {% endblock main %}

@@ -8,8 +8,8 @@
 
 {% block main %}
   <ol class="breadcrumb">
-    <li><a href="{% url 'questions' %}">{% trans 'Questions' %}</a></li>
-    <li class="active">{% trans 'Ask Question'  %}</li>
+    <li><a href="{% url 'questions' %}">{% trans 'Perguntas' %}</a></li>
+    <li class="active">{% trans 'Faça uma pergunta'  %}</li>
   </ol>
   <form action="{% url 'ask' %}" method="post" class="form-horizontal" role="form">
     {% csrf_token %}
@@ -32,8 +32,8 @@
     {% endfor %}
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">{% trans 'Post Your Question' %}</button>
-        <a href="{% url 'questions' %}" class="btn btn-default">{% trans 'Cancel' %}</a>
+        <button type="submit" class="btn btn-primary">{% trans 'Envie sua pergunta' %}</button>
+        <a href="{% url 'questions' %}" class="btn btn-default">{% trans 'Cancelar' %}</a>
       </div>
     </div>
   </form>

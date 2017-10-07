@@ -11,20 +11,20 @@
 
 {% block main %}
   <ol class="breadcrumb">
-    <li><a href="{% url 'questions' %}">{% trans "Questões" %}</a></li>
-    <li class="active">{% trans "Questão" %}</li>
+    <li><a href="{% url 'questions' %}">{% trans "Perguntas" %}</a></li>
+    <li class="active">{% trans "Pergunta" %}</li>
   </ol>
   <div class="primario">
     <div class="row question" question-id="{{ question.id }}">
       {% csrf_token %}
       <div class="col-md-1 options">
-          <span class="glyphicon glyphicon-chevron-up vote up-vote question-vote {% if user in question.get_up_voters %} voted {% endif %}" title="{% trans 'Click to up vote; click again to toggle' %}"></span>
+          <span class="glyphicon glyphicon-chevron-up vote up-vote question-vote {% if user in question.get_up_voters %} voted {% endif %}" title="{% trans 'Clique para dar uma curtida' %}"></span>
       <span class="votes">{{ question.votes }}</span>
-      <span class="glyphicon glyphicon-chevron-down vote down-vote question-vote {% if user in question.get_down_voters %}voted{% endif %}" title="{% trans 'Click to down vote; click again to toggle' %}"></span>
+      <span class="glyphicon glyphicon-chevron-down vote down-vote question-vote {% if user in question.get_down_voters %}voted{% endif %}" title="{% trans 'Clique para mostrar que não gostou da pergunta' %}"></span>
           {% if user in question.get_favoriters %}
-          <span class="glyphicon glyphicon-star favorite favorited" title="Click to mark this question as favorite; click again to toggle"></span>
+          <span class="glyphicon glyphicon-star favorite favorited" title="Clique para marcar essa pergunta como favorita"></span>
         {% else %}
-          <span class="glyphicon glyphicon-star-empty favorite" title="Click to mark this question as favorite; click again to toggle"></span
+          <span class="glyphicon glyphicon-star-empty favorite" title="Clique para marcar essa pergunta como favorita"></span
       {% endif %}
       <span class="favorite-count">{{ question.favorites }}</span>
       </div>
@@ -33,7 +33,7 @@
         <div class="question-user">
           <a href="{% url 'profile' question.user.username %}"><img src="{{ question.user.profile.get_picture }}" class="user"></a>
           <a href="{% url 'profile' question.user.username %}" class="username">{{ question.user.profile.get_screen_name }}</a>
-          <small class="asked">asked {{ question.update_date|naturaltime }}</small>
+          <small class="asked">enviado {{ question.update_date|naturaltime }}</small>
         </div>
         <div class="question-description">
           {{ question.get_description_as_markdown|safe }}
@@ -61,7 +61,7 @@
           {{ form.description }}
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">{% trans "Post Your Answer"%}</button>
+          <button type="submit" class="btn btn-primary">{% trans "Envie sua resposta"%}</button>
         </div>
       </form>
     </div>

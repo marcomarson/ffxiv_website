@@ -1,9 +1,9 @@
 {% extends 'messenger/base_messages.html' %}
 {% load i18n %}
 
-{% block title %}{% trans 'Inbox' %}{% endblock %}
+{% block title %}{% trans 'Caixa de Entrada' %}{% endblock %}
 
-{% block page_header %}{% trans 'Inbox' %}{% endblock %}
+{% block page_header %}{% trans 'Caixa de Entrada' %}{% endblock %}
 
 {% block container %}
   <div class="conversation">
@@ -12,8 +12,8 @@
         {% include 'messenger/includes/partial_message.html' with message=message %}
       {% endfor %}
     {% else %}
-      <h4>{% trans 'This is the begining of a great new conversation.' %}</h4>
-      <p>{% trans "Let's get started now!" %}</p>
+      <h4>{% trans 'Esse é o começo de uma grande conversa' %}</h4>
+      <p>{% trans "Vamos começar!" %}</p>
     {% endif %}
     <li class="send-message"></li>
     <script type="text/javascript">window.onload = $('.conversation').scrollTop($('.conversation')[0].scrollHeight);</script>
